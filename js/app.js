@@ -15,7 +15,10 @@ function addList(name, result) {
     `;
   parent.appendChild(liElement);
 }
-
+function emptyInput(id) {
+  const element = document.getElementById(id);
+  element.value = "";
+}
 //-------------------------------------------------- triangle btn js---------------------------------------
 
 document
@@ -30,6 +33,8 @@ document
     } else {
       const area = (0.5 * parseFloat(base) * parseFloat(height)).toFixed(2);
       addList("Triangle", area);
+      emptyInput("triangle-b");
+      emptyInput("triangle-h");
     }
   });
 
@@ -47,6 +52,8 @@ document
     } else {
       const area = (parseFloat(width) * parseFloat(length)).toFixed(2);
       addList("Rectangle", area);
+      emptyInput("rectangle-w");
+      emptyInput("rectangle-l");
     }
   });
 
@@ -64,6 +71,8 @@ document
     } else {
       const area = (parseFloat(base) * parseFloat(height)).toFixed(2);
       addList("Parallelogram", area);
+      emptyInput("parallelogram-b");
+      emptyInput("parallelogram-h");
     }
   });
 
@@ -81,6 +90,8 @@ document
     } else {
       const area = (0.5 * parseFloat(d1) * parseFloat(d2)).toFixed(2);
       addList("Rhombus", area);
+      emptyInput("rhombus-d1");
+      emptyInput("rhombus-d2");
     }
   });
 //-------------------------------------------------- Pentagon btn js---------------------------------------
@@ -99,6 +110,8 @@ document
         2
       );
       addList("Pentagon", area);
+      emptyInput("pentagon-p");
+      emptyInput("pentagon-b");
     }
   });
 
@@ -116,5 +129,7 @@ document
     } else {
       const area = (3.14 * parseFloat(aAxis) * parseFloat(bAxis)).toFixed(2);
       addList("Ellipse", area);
+      emptyInput("ellipse-a");
+      emptyInput("ellipse-b");
     }
   });
