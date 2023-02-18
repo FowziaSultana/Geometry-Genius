@@ -8,9 +8,9 @@ function addList(name, result) {
   const liElement = document.createElement("li");
   liElement.innerHTML = `<div class="mt-2 flex justify-around items-center gap-2"
   >
-  <span class="">${name}</span> <span class="">${result}cm&#178;
+  <span class="text-xs">${name}</span> <span class="text-xs">${result}cm&#178;
   </span>   
-    <button  class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-2 focus:outline-none focus:ring-blue-300 font-medium  text-xs ml-2 px-2 py-1.5 text-center">Convert to m&#178;
+    <button  class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-2 focus:outline-none focus:ring-blue-300  text-xs ml-2 px-2 py-1.5 text-center">Convert to m&#178;
     </button></div>
     `;
   parent.appendChild(liElement);
@@ -99,5 +99,22 @@ document
         2
       );
       addList("Pentagon", area);
+    }
+  });
+
+//-------------------------------------------------- ellipse btn js---------------------------------------
+
+document
+  .getElementById("calculate-ellipse-btn")
+  .addEventListener("click", function () {
+    const aAxis = getValueFromInput("ellipse-a");
+    const bAxis = getValueFromInput("ellipse-b");
+    if (isNaN(aAxis) || isNaN(bAxis)) {
+      alert("Please enter a valid number");
+    } else if (aAxis <= 0 || bAxis <= 0) {
+      alert("Please give a positive number");
+    } else {
+      const area = (3.14 * parseFloat(aAxis) * parseFloat(bAxis)).toFixed(2);
+      addList("Ellipse", area);
     }
   });
