@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geometry</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ash: "rgba(17,17,17,0.6)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <!-- --------------------------------------nav start here---------------------------------- -->
+    <nav class="bg-cyan-100 border-gray-200 px-2 sm:px-4 py-2.5 rounded">
+      <div class="w-11/12 flex flex-wrap items-center justify-between mx-auto">
+        <span
+          class="text-ash self-center text-base md:text-xl font-semibold whitespace-nowrap"
+        >
+          <h1
+            class="text-black self-center text-xl md:text-4xl font-bold whitespace-nowrap"
+          >
+            Interactive
+          </h1>
+          Geometry Genius</span
+        >
+
+        <div class="flex md:order-2">
+          <button
+            id="home-btn"
+            type="button"
+            class="text-white bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0"
+          >
+            Home
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- --------------------------------------main start here---------------------------------- -->
+
+    <!-- --------------------------------------------------faq start -->
+
+    <div class="max-w-screen-xl mx-auto px-5 bg-white min-h-sceen">
+      <h2 class="font-bold text-5xl mt-5 tracking-tight text-center">
+        Assignment questions
+      </h2>
+
+      <div class="grid max-w-xl mx-auto mt-8">
+        <div class="py-5 border-b-2 border-cyan-100">
+          <details class="group">
+            <summary
+              class="flex justify-between items-center font-medium cursor-pointer list-none"
+            >
+              <span>What is DOM and what is the purpose of DOM?</span>
+              <span class="transition group-open:rotate-180">
+                <svg
+                  fill="none"
+                  height="24"
+                  shape-rendering="geometricPrecision"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path d="M6 9l6 6 6-6"></path>
+                </svg>
+              </span>
+            </summary>
+            <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
+              SAAS platform is a cloud-based software service that allows users
+              to access and use a variety of tools and functionality.
+            </p>
+          </details>
+        </div>
+        <div class="py-5 border-b-2 border-cyan-100">
+          <details class="group">
+            <summary
+              class="flex justify-between items-center font-medium cursor-pointer list-none"
+            >
+              <span>
+                How will you select HTML elements using DOM? Name the DOM
+                methods.</span
+              >
+              <span class="transition group-open:rotate-180">
+                <svg
+                  fill="none"
+                  height="24"
+                  shape-rendering="geometricPrecision"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path d="M6 9l6 6 6-6"></path>
+                </svg>
+              </span>
+            </summary>
+            <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
+              We offers a variety of billing options, including monthly and
+              annual subscription plans, as well as pay-as-you-go pricing for
+              certain services. Payment is typically made through a credit card
+              or other secure online payment method.
+            </p>
+          </details>
+        </div>
+        <div class="py-5 border-b-2 border-cyan-100">
+          <details class="group">
+            <summary
+              class="flex justify-between items-center font-medium cursor-pointer list-none"
+            >
+              <span> What is event bubble?</span>
+              <span class="transition group-open:rotate-180">
+                <svg
+                  fill="none"
+                  height="24"
+                  shape-rendering="geometricPrecision"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path d="M6 9l6 6 6-6"></path>
+                </svg>
+              </span>
+            </summary>
+            <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
+              We offers a 30-day money-back guarantee for most of its
+              subscription plans. If you are not satisfied with your
+              subscription within the first 30 days, you can request a full
+              refund. Refunds for subscriptions that have been active for longer
+              than 30 days may be considered on a case-by-case basis.
+            </p>
+          </details>
+        </div>
+        <div class="py-5 border-b-2 border-cyan-100">
+          <details class="group">
+            <summary
+              class="flex justify-between items-center font-medium cursor-pointer list-none"
+            >
+              <span> What is a callback function and why will you use it?</span>
+              <span class="transition group-open:rotate-180">
+                <svg
+                  fill="none"
+                  height="24"
+                  shape-rendering="geometricPrecision"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path d="M6 9l6 6 6-6"></path>
+                </svg>
+              </span>
+            </summary>
+            <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
+              To cancel your We subscription, you can log in to your account and
+              navigate to the subscription management page. From there, you
+              should be able to cancel your subscription and stop future
+              billing.
+            </p>
+          </details>
+        </div>
+      </div>
+    </div>
+
+    <!-- --------------------------------------------------faq end ------------------------------------------->
+
+    <script src="js/blog.js"></script>
+  </body>
+</html>

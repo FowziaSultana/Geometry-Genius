@@ -1,3 +1,9 @@
+//-------------------------------------------------- blog btn js---------------------------------------
+
+document.getElementById("blog-btn").addEventListener("click", function () {
+  window.location.href = "../blog.html";
+});
+
 function getValueFromInput(id) {
   const element = document.getElementById(id);
   const value = element.value;
