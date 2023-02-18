@@ -1,4 +1,4 @@
-//-------------------------------------------------- blog btn js---------------------------------------
+let resultSpanId = 0;
 
 document.getElementById("blog-btn").addEventListener("click", function () {
   window.location.href = "../blog.html";
@@ -9,22 +9,33 @@ function getValueFromInput(id) {
   const value = element.value;
   return value;
 }
-function addList(name, result) {
-  const parent = document.getElementById("result-list");
-  const liElement = document.createElement("li");
-  liElement.innerHTML = `<div class="mt-2 flex justify-around items-center gap-2"
-  >
-  <span class="text-xs">${name}</span> <span class="text-xs">${result}cm&#178;
-  </span>   
-    <button  class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-2 focus:outline-none focus:ring-blue-300  text-xs ml-2 px-2 py-1.5 text-center">Convert to m&#178;
-    </button></div>
-    `;
-  parent.appendChild(liElement);
-}
+
 function emptyInput(id) {
   const element = document.getElementById(id);
   element.value = "";
 }
+// ------------------------------------------------------------------Result div js----------------------
+
+function changeResult(id, result) {
+  const element = document.getElementById(id);
+  const meterResult = result / 10000;
+  element.innerText = meterResult.toFixed(2) + "m²";
+}
+
+function addList(name, result) {
+  resultSpanId++;
+  const parent = document.getElementById("result-list");
+  const liElement = document.createElement("li");
+  liElement.innerHTML = `<div class="mt-2 flex justify-around items-center gap-2"
+  >
+  <span class="text-xs">${name}</span> <span id=${resultSpanId} class="text-xs">${result}cm&#178;
+  </span>   
+    <button  onclick=changeResult("${resultSpanId}","${result}") class="btn text-white bg-blue-700 hover:bg-blue-800 focus:ring-2 focus:outline-none focus:ring-blue-300  text-xs ml-2 px-2 py-1.5 text-center">Convert to m&#178;
+    </button></div>
+    `;
+  parent.appendChild(liElement);
+}
+
 //-------------------------------------------------- triangle btn js---------------------------------------
 
 document
@@ -140,6 +151,7 @@ document
     }
   });
 
+//-------------------------------------------- backgroundColor change js
 var myElements = document.querySelectorAll(".single-calculation-div");
 for (const elementName of myElements) {
   elementName.addEventListener("mouseenter", function () {
