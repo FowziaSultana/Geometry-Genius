@@ -155,7 +155,15 @@ document
 var myElements = document.querySelectorAll(".single-calculation-div");
 for (const elementName of myElements) {
   elementName.addEventListener("mouseenter", function () {
-    var colors = ["#DFFF00", "#FFBF00", "#FF7F50", "#9FE2BF"];
+    var colors = [
+      "#DFFF00",
+      "#FFBF00",
+      "#FF7F50",
+      "#9FE2BF",
+      "#f1c1c2",
+      "#fff2f4",
+      "#e6e6fa",
+    ];
     var randomIndex = Math.floor(Math.random() * colors.length);
     elementName.style.backgroundColor = colors[randomIndex];
   });
