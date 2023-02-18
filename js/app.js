@@ -139,3 +139,15 @@ document
       emptyInput("ellipse-b");
     }
   });
+
+var myElements = document.querySelectorAll(".single-calculation-div");
+for (const elementName of myElements) {
+  elementName.addEventListener("mouseenter", function () {
+    var colors = ["#DFFF00", "#FFBF00", "#FF7F50", "#9FE2BF"];
+    var randomIndex = Math.floor(Math.random() * colors.length);
+    elementName.style.backgroundColor = colors[randomIndex];
+  });
+  elementName.addEventListener("mouseleave", function () {
+    elementName.style.backgroundColor = "white";
+  });
+}
