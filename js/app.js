@@ -24,9 +24,9 @@ document
     const base = getValueFromInput("triangle-b");
     const height = getValueFromInput("triangle-h");
     if (isNaN(base) || isNaN(height)) {
-      alert("please enter a valid number");
+      alert("Please enter a valid number");
     } else if (base <= 0 || height <= 0) {
-      alert("please give a positive number");
+      alert("Please give a positive number");
     } else {
       const area = (0.5 * parseFloat(base) * parseFloat(height)).toFixed(2);
       addList("Triangle", area);
@@ -41,9 +41,9 @@ document
     const width = getValueFromInput("rectangle-w");
     const length = getValueFromInput("rectangle-l");
     if (isNaN(width) || isNaN(length)) {
-      alert("please enter a valid number");
+      alert("Please enter a valid number");
     } else if (width <= 0 || length <= 0) {
-      alert("please give a positive number");
+      alert("Please give a positive number");
     } else {
       const area = (parseFloat(width) * parseFloat(length)).toFixed(2);
       addList("Rectangle", area);
@@ -58,11 +58,46 @@ document
     const base = getValueFromInput("parallelogram-b");
     const height = getValueFromInput("parallelogram-h");
     if (isNaN(base) || isNaN(height)) {
-      alert("please enter a valid number");
+      alert("Please enter a valid number");
     } else if (base <= 0 || height <= 0) {
-      alert("please give a positive number");
+      alert("Please give a positive number");
     } else {
       const area = (parseFloat(base) * parseFloat(height)).toFixed(2);
       addList("Parallelogram", area);
+    }
+  });
+
+//-------------------------------------------------- rhombus btn js---------------------------------------
+
+document
+  .getElementById("calculate-rhombus-btn")
+  .addEventListener("click", function () {
+    const d1 = getValueFromInput("rhombus-d1");
+    const d2 = getValueFromInput("rhombus-d2");
+    if (isNaN(d1) || isNaN(d2)) {
+      alert("Please enter a valid number");
+    } else if (d1 <= 0 || d2 <= 0) {
+      alert("Please give a positive number");
+    } else {
+      const area = (0.5 * parseFloat(d1) * parseFloat(d2)).toFixed(2);
+      addList("Rhombus", area);
+    }
+  });
+//-------------------------------------------------- Pentagon btn js---------------------------------------
+
+document
+  .getElementById("calculate-pentagon-btn")
+  .addEventListener("click", function () {
+    const perimeter = getValueFromInput("pentagon-p");
+    const apothem = getValueFromInput("pentagon-b");
+    if (isNaN(perimeter) || isNaN(apothem)) {
+      alert("Please enter a valid number");
+    } else if (perimeter <= 0 || apothem <= 0) {
+      alert("Please give a positive number");
+    } else {
+      const area = (0.5 * parseFloat(perimeter) * parseFloat(apothem)).toFixed(
+        2
+      );
+      addList("Pentagon", area);
     }
   });
