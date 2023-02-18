@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geometry</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ash: "rgba(17,17,17,0.6)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <!-- --------------------------------------nav start here---------------------------------- -->
+    <nav class="bg-cyan-100 border-gray-200 px-2 sm:px-4 py-2.5 rounded">
+      <div
+        class="container flex flex-wrap items-center justify-between mx-auto"
+      >
+        <span
+          class="text-ash self-center text-base md:text-xl font-semibold whitespace-nowrap"
+        >
+          <h1
+            class="text-black self-center text-xl md:text-4xl font-bold whitespace-nowrap"
+          >
+            Interactive
+          </h1>
+          Geometry Genius</span
+        >
+
+        <div class="flex md:order-2">
+          <button
+            type="button"
+            class="text-white bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0"
+          >
+            Blog
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- --------------------------------------main start here---------------------------------- -->
+
+    <div
+      id="main-container"
+      class="w-11/12 mx-auto mt-10 grid grid-cols-1 xl:grid-cols-4 xl:gap-8 justify-items-center"
+    >
+      <div
+        class="xl:col-span-3 math-container grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5"
+      >
+        <!-- -------------------------------------triangle div start ---------------------------------- -->
+
+        <div
+          class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        >
+          <div class="mx-auto w-4/5">
+            <img class="p-8" src="images/triangle.png" alt="product image" />
+          </div>
+
+          <div class="px-5 pb-5">
+            <div class="text-center my-2">
+              <h1 class="text-lg font-bold">Triangle</h1>
+              <p>Area(A)=0.5<span>&#215;</span>b<span>&#215;</span>h</p>
+            </div>
+            <div class="flex justify-between mb-2">
+              <input
+                id="triangle-b"
+                type="number"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-1/3 p-1"
+                placeholder="b"
+              /><span>cm</span>
+              <input
+                id="triangle-h"
+                type="number"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-1/3 p-1"
+                placeholder="h"
+              /><span>cm</span>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <button
+                id="calculate-triangle-btn"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+              >
+                Calculate
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- -------------------------------------rectangle div start ---------------------------------- -->
+
+        <div
+          class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        >
+          <div class="mx-auto w-4/5">
+            <img class="p-8" src="images/rectangle.png" alt="product image" />
+          </div>
+
+          <div class="px-5 pb-5">
+            <div class="text-center my-2">
+              <h1 class="text-lg font-bold">Rectangle</h1>
+
+              <p>Area(A)=w<span>&#215;</span>l</p>
+            </div>
+            <div class="flex justify-between mb-2">
+              <input
+                id="rectangle-w"
+                type="number"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-1/3 p-1"
+                placeholder="w"
+              /><span>cm</span>
+              <input
+                id="rectangle-l"
+                type="number"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-1/3 p-1"
+                placeholder="l"
+              /><span>cm</span>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <button
+                id="calculate-rectangle-btn"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+              >
+                Calculate
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- -------------------------------------Parallelogram div start---------------------------------- -->
+
+        <div
+          class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        >
+          <div class="mx-auto w-4/5">
+            <img
+              class="p-8"
+              src="images/parallelogram.png"
+              alt="product image"
+            />
+          </div>
+
+          <div class="px-5 pb-5">
+            <div class="text-center my-2">
+              <h1 class="text-lg font-bold">Parallelogram</h1>
+              <p>Area(A)=b<span>&#215;</span>h</p>
+            </div>
+            <div class="flex justify-between mb-2">
+              <input
+                id="parallelogram-b"
+                type="number"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-1/3 p-1"
+                placeholder="b"
+              /><span>cm</span>
+              <input
+                id="parallelogram-h"
+                type="number"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-1/3 p-1"
+                placeholder="h"
+              /><span>cm</span>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <button
+                id="calculate-parallelogram-btn"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+              >
+                Calculate
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- -------------------------------------rhombus div start ---------------------------------- -->
+
+        <div
+          class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        >
+          <div class="mx-auto w-4/5">
+            <img class="p-8" src="images/rhombus.png" alt="product image" />
+          </div>
+
+          <div class="px-5 pb-5">
+            <div class="text-center my-2">
+              <h1 class="text-lg font-bold">Rhombus</h1>
+              <p>
+                Area(A)=0.5<span>&#215;</span>d<sub>1</sub
+                ><span>&#215;</span>d<sub>2</sub>
+              </p>
+            </div>
+            <div class="flex justify-between mb-2">
+              <input
+                id="rhombus-d1"
+                type="number"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-1/3 p-1"
+                placeholder="d1"
+              /><span>cm</span>
+              <input
+                id="rhombus-d2"
+                type="number"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-1/3 p-1"
+                placeholder="d2"
+              /><span>cm</span>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <button
+                id="calculate-rhombus-btn"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+              >
+                Calculate
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- -------------------------------------pentagon div start ---------------------------------- -->
+
+        <div
+          class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        >
+          <div class="flex justify-center">
+            <img
+              class="w-3/4 p-8"
+              src="images/pentagon.png"
+              alt="product image"
+            />
+          </div>
+
+          <div class="px-5 pb-5">
+            <div class="text-center my-2">
+              <h1 class="text-lg font-bold">Penatgon</h1>
+              <p>Area(A)=0.5<span>&#215;</span>p<span>&#215;</span>b</p>
+            </div>
+            <div class="flex justify-between mb-2">
+              <input
+                id="pentagon-p"
+                type="number"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-1/3 p-1"
+                placeholder="p"
+              /><span>cm</span>
+              <input
+                id="pentagon-b"
+                type="number"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-1/3 p-1"
+                placeholder="b"
+              /><span>cm</span>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <button
+                id="calculate-pentagon-btn"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+              >
+                Calculate
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- -------------------------------------ellipse div start---------------------------------- -->
+
+        <div
+          class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        >
+          <div class="mx-auto w-4/5">
+            <img class="p-8" src="images/ellipse.png" alt="product image" />
+          </div>
+
+          <div class="px-5 pb-5">
+            <div class="text-center my-2">
+              <h1 class="text-lg font-bold">Ellipse</h1>
+              <p>Area(A)=<span>&#8508;</span>ab</p>
+            </div>
+
+            <div class="flex justify-between mb-2">
+              <input
+                id="ellipse-a"
+                type="number"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-1/3 p-1"
+                placeholder="a"
+              /><span>cm</span>
+              <input
+                id="ellipse-b"
+                type="number"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-1/3 p-1"
+                placeholder="b"
+              /><span>cm</span>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <button
+                id="calculate-ellipse-btn"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+              >
+                Calculate
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- -------------------------------------result div start ---------------------------------- -->
+      <div class="result-container mt-8 xl:mt-0">
+        <div
+          id="result-div"
+          class="px-3 py-5 flex flex-col w-80 h-80 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 overflow-y-scroll"
+        >
+          <h1 class="text-2xl font-semibold text-center">RESULT</h1>
+          <ol id="result-list" class="list-decimal text-base my-2 mx-auto"></ol>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
