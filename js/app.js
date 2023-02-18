@@ -29,4 +29,17 @@ document
       addList("Triangle", area);
     }
   });
-//   b7a5-geometry-genius-assignment-FowziaSultana
+document
+  .getElementById("calculate-rectangle-btn")
+  .addEventListener("click", function () {
+    const width = getValueFromInput("rectangle-w");
+    const length = getValueFromInput("rectangle-l");
+    if (isNaN(width) || isNaN(length)) {
+      alert("please enter a valid number");
+    } else if (width <= 0 || length <= 0) {
+      alert("please give a positive number");
+    } else {
+      const area = (parseFloat(width) * parseFloat(length)).toFixed(2);
+      addList("Rectangle", area);
+    }
+  });
